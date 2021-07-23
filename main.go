@@ -4,13 +4,13 @@ import (
 	"log"
 	"net/http"
 	"os"
-//	"eddy.com/todo/data"
+	"eddy.com/todo/data"
 	"eddy.com/todo/route"
 )
 
 func main() {
 	var PORT = ":9000"
-	//data.InitDatabase()
+	data.InitDatabase()
 
 	if envPort := os.Getenv("PORT"); envPort != "" {
 		PORT = ":" + envPort
